@@ -3,6 +3,8 @@
 *.a
 *.so
 
+.idea
+node_modules
 # Folders
 _obj
 _test
