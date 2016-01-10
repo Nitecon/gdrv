@@ -30,3 +30,6 @@ There is a couple of different ways you can help.
 - Which means we need both GUI / Backend help to interface with the drive api's etc.
 
 More questions beyond reading the entry points (`app/main.js`) for electron and (`main.go`) for golang feel free to ask / create an issue.
+
+## How does gDrv essentially work?
+gDrv design is based on a frontend / backend setup.  The frontend is handled by electron (chromium) as it already has window management etc solved and reduces our need to deal with native gui implementations across multiple OS's.  Node.js is responsible for spawning the OS specific golang binary application, and go into listening mode.  The go application upon startup responds to the electron application with a random port location that the application is listening to locally, and then redirects to that location for the actual "main" or homepage whatever you want to call it.  Beyond the redirection electron will have a couple of menu items over time for getting general application help / checking for updates, downloading updates / respawning the app and exit etc and thats just about it.
