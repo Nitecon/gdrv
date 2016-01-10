@@ -7,6 +7,9 @@ To date there is no open source version of google drive that still works and thi
 Contributors are welcome.
 
 ## Getting started with the project
+`go get -u https://github.com/Nitecon/gdrv`
+
+or if you would like to contribute, fork and clone it, fix / add functionality and PR back!
 Once you have cloned the project you need npm/node installed and then run the intial bootstrapper to get your dependencies,
 available and ready to be used: `./bin/upgrade-deps.sh`
 
