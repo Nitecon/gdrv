@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"net/http"
-	"github.com/julienschmidt/httprouter"
 	"net"
+	"net/http"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 var helloMessage string = `
@@ -23,8 +24,8 @@ func HomeHandler(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	return
 }
 
-func getRandPort() int{
-	l,_ := net.Listen("tcp",":0")
+func getRandPort() int {
+	l, _ := net.Listen("tcp", ":0")
 	defer l.Close()
 	return l.Addr().(*net.TCPAddr).Port
 }
@@ -34,8 +35,6 @@ func main() {
 	router := httprouter.New()
 	router.GET("/", HomeHandler)
 	fmt.Printf("http://localhost:%d", randPort)
-	http.ListenAndServe(fmt.Sprintf(":%d",randPort), router)
+	http.ListenAndServe(fmt.Sprintf(":%d", randPort), router)
 
 }
-
-

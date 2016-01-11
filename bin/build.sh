@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-APP_NAME="EStrap"
+APP_NAME="gdrv"
 SERVER_BIN="svx.bin"
 EVERS="0.36.2"
 SOURCE="${BASH_SOURCE[0]}"
@@ -37,12 +37,3 @@ echo "--> Building server thread binaries"
 cd $appDir
 echo "--> Building Linux 64"
 buildLinux
-#buildServer linux 386
-#buildServer windows amd64
-#buildServer windows 386
-#buildServer darwin 386
-#buildServer darwin amd64
-
-echo "--> Building the final binaries"
-#electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> --version=<Electron version> [optional flags...]
-#electron-packager . FooBar --platform=darwin --arch=x64 --version=0.36.2

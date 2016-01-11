@@ -10,8 +10,13 @@ Contributors are welcome.
 `go get -u https://github.com/Nitecon/gdrv`
 
 or if you would like to contribute, fork and clone it, fix / add functionality and PR back!
-Once you have cloned the project you need npm/node installed and then run the intial bootstrapper to get your dependencies,
-available and ready to be used: `./bin/upgrade-deps.sh`
+Once you have cloned the project you need `npm / node` installed.
+Once you have installed and verified that you have npm installed running something like: `npm --version`
+You are now ready to start using the app, just run `npm start`.
+- This will install and download all dependencies needed to start / compile the app
+- The initial download / update takes the longest, future runs will be much faster.
+- Once done you should see a popup of the application.  If you are on mac / linux 32bit / windows
+  - You will need to edit bin/build.sh to update it for your env it's set normally for a linux 64bit os.
 
 That will upgrade you to the revision that we currently use for the program.
 
