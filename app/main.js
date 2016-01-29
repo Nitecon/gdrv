@@ -30,15 +30,14 @@ switch (platform) {
         //global.console.log("unsupported platform: " + platform);
         break;
 }
-var tmpPath = "/data/apps/go/src/github.com/Nitecon/electrostrap/bin/svx.bin";
-//var svr = spawn(execPath.toString());
+
 var svr = null;
 
 var mainWindow = null;
 
 app.on('ready', function() {
     mainWindow = new BrowserWindow({
-        title: "ElectroStrap",
+        title: "gDrv",
         frame: true,
         resizable: true,
         height: 600,

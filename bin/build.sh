@@ -17,7 +17,7 @@ buildLinux(){
     fi
     mv $appDir/build/linux/amd64/svx.bin $appDir/app/
     cd dist
-    electron-packager $appDir/app $APP_NAME --platform=linux --arch=x64 --version=$EVERS
+    $appDir/node_modules/electron-packager/cli.js $appDir/app $APP_NAME --platform=linux --arch=x64 --version=$EVERS
 }
 
 cd $appDir
@@ -30,7 +30,6 @@ mkdir -p dist
 echo "-->> Installing dependencies"
 npm update
 echo "-->> Upgrading all modules"
-npm update electron-packager
 npm update electron-prebuilt
 
 echo "--> Building server thread binaries"
